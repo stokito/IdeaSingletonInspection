@@ -1,0 +1,11 @@
+<idea-plugin version="2" url="https://github.com/stokito/IdeaSingletonInspection">
+    <name>Singleton Inspection</name>
+    <id>SingletonInspection</id>
+    <description>Inspection for (probably) inappropriate use of Singleton pattern.</description>
+    <version>1.0</version>
+    <vendor email="stokito@gmail.com" url="http://stokito.blogspot.com/">Sergey Ponomarev</vendor>
+    <!--<extensions defaultExtensionNs="com.github.stokito">-->
+    <extensions defaultExtensionNs="com.intellij">
+        <inspectionToolProvider implementation="com.github.stokito.IdeaSingletonInspection.SingletonInspectionProvider"/>
+    </extensions>
+</idea-plugin>
