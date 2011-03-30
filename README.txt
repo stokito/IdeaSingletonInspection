@@ -5,4 +5,4 @@ Singleton class should be checked for next errors:
 * Class should have private constructor.
 * getInstance() method must be public and static and return instance of its class.
 
-Please see http://www.jpatterns.org/ for patterns annotations.
+Please also see http://www.jpatterns.org/ for patterns annotations.

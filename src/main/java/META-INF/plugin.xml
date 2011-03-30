@@ -1,7 +1,22 @@
 <idea-plugin version="2" url="https://github.com/stokito/IdeaSingletonInspection">
     <name>Singleton Inspection</name>
     <id>SingletonInspection</id>
-    <description>Inspection for (probably) inappropriate use of Singleton pattern.</description>
+    <idea-version since-build="99.18" />
+    <category>Inspection</category>
+    <description>
+        <![CDATA[
+        <p>This inspection reports about (probably) inappropriate use of <a href="http://en.wikipedia.org/wiki/Singleton_pattern">Singleton pattern</a>.</p>
+        <p>Just write <code>getInstance()</code> method, and this inspection will check this class like a Singleton.</p>
+        <p>Singleton class should be checked for next errors:
+        <ul>
+        <li>Class should be final.</li>
+        <li>Class should have private constructor.</li>
+        <li><code>getInstance()</code> method must be public and static and return instance of its class.</li>
+        </ul>
+        </p>
+        <p>Please also see <a href="http://www.jpatterns.org/">JPatterns library</a> for patterns annotations.</p>
+    ]]>
+    </description>
     <version>1.0</version>
     <vendor email="stokito@gmail.com" url="http://stokito.blogspot.com/">Sergey Ponomarev</vendor>
     <extensions defaultExtensionNs="com.intellij">
