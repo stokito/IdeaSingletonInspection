@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.stokito</groupId>
+	<artifactId>IdeaSingletonInspection</artifactId>
+	<version>1.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>Idea plugin for inspection of Singleton pattern</name>
+	<description>
+	<![CDATA[
+        <p>This inspection reports about (probably) inappropriate use of <a href="http://en.wikipedia.org/wiki/Singleton_pattern">Singleton pattern</a>.</p>
+        <p>Just write <code>getInstance()</code> method, and this inspection will check this class like a Singleton.</p>
+        <p>Singleton class should be checked for next errors:
+        <ul>
+        <li>Class should be final.</li>
+        <li>Class should have private constructor.</li>
+        <li><code>getInstance()</code> method must be public and static and return instance of its class.</li>
+        </ul>
+        </p>
+        <p>Please also see <a href="http://www.jpatterns.org/">JPatterns library</a> for patterns annotations.</p>
+	]]>
+	</description>
+	<url>https://github.com/stokito/${project.artifactId}</url>
+	<inceptionYear>2011</inceptionYear>
+
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<connection>scm:git:https://stokito@github.com/stokito/${project.artifactId}.git</connection>
+		<developerConnection>scm:git:https://stokito@github.com/stokito/${project.artifactId}.git</developerConnection>
+		<url>https://github.com/stokito/${project.artifactId}</url>
+	</scm>
+
+	<issueManagement>
+		<url>https://github.com/stokito/${project.artifactId}/issues</url>
+	</issueManagement>
+
+	<developers>
+		<developer>
+			<id>stokito</id>
+			<name>Sergey Ponomarev</name>
+			<email>stokito@gmail.com</email>
+			<url>http://stokito.name/</url>
+			<roles>
+				<role>project owner</role>
+				<role>architect</role>
+				<role>developer</role>
+				<role>tester</role>
+			</roles>
+			<timezone>+2</timezone>
+			<properties>
+				<gtalk>stokito@gmail.com</gtalk>
+			</properties>
+		</developer>
+	</developers>
+
+	<properties>
+		<jdk>1.6</jdk>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${jdk}</source>
+					<target>${jdk}</target>
+					<compilerVersion>${jdk}</compilerVersion>
+					<optimize>true</optimize>
+					<verbose>true</verbose>
+					<debug>true</debug>
+					<fork>true</fork>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>
