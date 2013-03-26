@@ -1,6 +1,5 @@
 package com.github.stokito.IdeaSingletonInspection;
 
-import com.intellij.codeInsight.daemon.GroupNames;
 import com.intellij.codeInspection.BaseJavaLocalInspectionTool;
 import com.intellij.codeInspection.ProblemsHolder;
 import com.intellij.codeInspection.ui.MultipleCheckboxOptionsPanel;
@@ -19,7 +18,6 @@ public class SingletonInspection extends BaseJavaLocalInspectionTool {
   public PsiElementVisitor buildVisitor(@NotNull final ProblemsHolder holder, final boolean isOnTheFly) {
     return new SingletonInspectionVisitor(holder, m_checkFinal);
   }
-
 
   @Override
   public JComponent createOptionsPanel() {
