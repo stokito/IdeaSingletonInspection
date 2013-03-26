@@ -16,29 +16,6 @@ public class SingletonInspection extends BaseJavaLocalInspectionTool {
 
   @NotNull
   @Override
-  public String getDisplayName() {
-    return "Singleton inspection";
-  }
-
-  @NotNull
-  @Override
-  public String getGroupDisplayName() {
-    return GroupNames.BUGS_GROUP_NAME;
-  }
-
-  @NotNull
-  @Override
-  public String getShortName() {
-    return "Singleton";
-  }
-
-  @Override
-  public boolean isEnabledByDefault() {
-    return true;
-  }
-
-  @NotNull
-  @Override
   public PsiElementVisitor buildVisitor(@NotNull final ProblemsHolder holder, final boolean isOnTheFly) {
     return new SingletonInspectionVisitor(holder, m_checkFinal);
   }

@@ -16,10 +16,18 @@
         </p>
         <p>Please also see <a href="http://www.jpatterns.org/">JPatterns library</a> for patterns annotations.</p>
     ]]>
-  </description>
-  <version>1.1</version>
-  <vendor email="stokito@gmail.com" url="http://stokito.blogspot.com/">Sergey Ponomarev</vendor>
-  <extensions defaultExtensionNs="com.intellij">
-    <inspectionToolProvider implementation="com.github.stokito.IdeaSingletonInspection.SingletonInspectionProvider"/>
-  </extensions>
+    </description>
+    <version>1.2</version>
+    <vendor email="stokito@gmail.com" url="http://stokito.blogspot.com/">Sergey Ponomarev</vendor>
+    <extensions defaultExtensionNs="com.intellij">
+        <localInspection shortName="Singleton"
+                         displayName="Inappropriate use of Singleton design pattern"
+                         groupPath="Design Patterns"
+                         groupName="GoF"
+                         enabledByDefault="true"
+                         level="WARNING"
+                         hasStaticDescription="true"
+                         implementationClass="com.github.stokito.IdeaSingletonInspection.SingletonInspection"
+                />
+    </extensions>
 </idea-plugin>
