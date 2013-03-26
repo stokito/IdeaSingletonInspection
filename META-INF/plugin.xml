@@ -1,7 +1,7 @@
 <idea-plugin version="2" url="https://github.com/stokito/IdeaSingletonInspection">
   <name>Singleton Inspection</name>
   <id>SingletonInspection</id>
-  <idea-version since-build="99.18"/>
+  <idea-version since-build="123.169"/>
   <category>Inspection</category>
   <description>
     <![CDATA[
