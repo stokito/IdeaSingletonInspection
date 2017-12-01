@@ -1,9 +1,10 @@
 package com.github.stokito.IdeaSingletonInspection.smells;
 
-import com.github.stokito.IdeaSingletonInspection.quickFixes.QuickFixes;
 import com.intellij.psi.PsiClass;
 import com.intellij.psi.PsiModifierList;
 import org.jetbrains.annotations.NotNull;
+
+import static com.github.stokito.IdeaSingletonInspection.quickFixes.QuickFixes.SET_CLASS_FINAL;
 
 public class ClassFinalModifier extends Smell {
 
@@ -12,7 +13,7 @@ public class ClassFinalModifier extends Smell {
     final PsiModifierList modifierList = aClass.getModifierList();
     assert modifierList != null;
     if (!modifierList.hasModifierProperty("final")) {
-      getHolder().registerProblem(aClass, "Class should be final", QuickFixes.SET_CLASS_FINAL);
+      getHolder().registerProblem(aClass, "Class should be final", SET_CLASS_FINAL);
     }
   }
 

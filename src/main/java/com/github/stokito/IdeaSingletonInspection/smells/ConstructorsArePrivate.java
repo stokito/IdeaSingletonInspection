@@ -1,10 +1,11 @@
 package com.github.stokito.IdeaSingletonInspection.smells;
 
-import com.github.stokito.IdeaSingletonInspection.quickFixes.QuickFixes;
 import com.intellij.psi.PsiClass;
 import com.intellij.psi.PsiMethod;
 import com.intellij.psi.PsiModifierList;
 import org.jetbrains.annotations.NotNull;
+
+import static com.github.stokito.IdeaSingletonInspection.quickFixes.QuickFixes.CONSTRUCTOR_MODIFIERS;
 
 public class ConstructorsArePrivate extends Smell {
 
@@ -14,7 +15,7 @@ public class ConstructorsArePrivate extends Smell {
     for (final PsiMethod constructor : constructors) {
       @NotNull final PsiModifierList modifiers = constructor.getModifierList();
       if (!modifiers.hasModifierProperty("private")) {
-        getHolder().registerProblem(constructor, "Constructor must be private", QuickFixes.CONSTRUCTOR_MODIFIERS);
+        getHolder().registerProblem(constructor, "Constructor must be private", CONSTRUCTOR_MODIFIERS);
       }
     }
   }
