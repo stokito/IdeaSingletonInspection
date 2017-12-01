@@ -1,8 +1,8 @@
 # Singleton pattern inspection plugin for IntelliJ Idea
 
-[Singleton Inspection Plugin at plugins portal](http://plugins.jetbrains.com/plugin?pr=&pluginId=6015)
+[Singleton Inspection Plugin at plugins portal](https://plugins.jetbrains.com/plugin/6015-singleton-inspection)
 
-This inspection reports about (probably) inappropriate use of [Singleton pattern](http://en.wikipedia.org/wiki/Singleton_pattern).
+This inspection reports about (probably) inappropriate use of [Singleton pattern](https://en.wikipedia.org/wiki/Singleton_pattern).
 Just write `getInstance()` method, and this inspection will check this class like a Singleton.
 Singleton class should be checked for next errors:
 * Class should be final.
