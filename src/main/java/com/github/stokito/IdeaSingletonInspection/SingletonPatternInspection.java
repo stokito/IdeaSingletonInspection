@@ -1,6 +1,6 @@
 package com.github.stokito.IdeaSingletonInspection;
 
-import com.intellij.codeInspection.BaseJavaLocalInspectionTool;
+import com.intellij.codeInspection.AbstractBaseJavaLocalInspectionTool;
 import com.intellij.codeInspection.ProblemsHolder;
 import com.intellij.codeInspection.ui.MultipleCheckboxOptionsPanel;
 import com.intellij.psi.PsiElementVisitor;
@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 
-public class SingletonPatternInspection extends BaseJavaLocalInspectionTool {
+public class SingletonPatternInspection extends AbstractBaseJavaLocalInspectionTool {
 
   @SuppressWarnings({"PublicField"})
   public boolean m_checkFinal = false;
