@@ -21,8 +21,8 @@
     <extensions defaultExtensionNs="com.intellij">
         <localInspection shortName="SingletonPattern"
                          displayName="Inappropriate use of Singleton design pattern"
-                         groupPath="Design Patterns"
-                         groupName="GoF"
+                         groupPath="Java"
+                         groupName="Class structure"
                          enabledByDefault="true"
                          level="WARNING"
                          hasStaticDescription="true"
