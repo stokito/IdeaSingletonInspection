@@ -1,11 +1,11 @@
-<idea-plugin version="2" url="https://github.com/stokito/IdeaSingletonInspection">
+<idea-plugin url="https://github.com/stokito/IdeaSingletonInspection">
   <name>Singleton Inspection</name>
   <id>SingletonInspection</id>
   <idea-version since-build="123.169"/>
   <category>Inspection</category>
   <description>
     <![CDATA[
-        <p>This inspection reports about (probably) inappropriate use of <a href="http://en.wikipedia.org/wiki/Singleton_pattern">Singleton pattern</a>.</p>
+        <p>This inspection reports about (probably) inappropriate use of <a href="https://en.wikipedia.org/wiki/Singleton_pattern">Singleton pattern</a>.</p>
         <p>Just write <code>getInstance()</code> method, and this inspection will check this class like a Singleton.</p>
         <p>Singleton class should be checked for next errors:
         <ul>
@@ -14,11 +14,10 @@
         <li><code>getInstance()</code> method must be public and static and return instance of its class.</li>
         </ul>
         </p>
-        <p>Please also see <a href="http://www.jpatterns.org/">JPatterns library</a> for patterns annotations.</p>
     ]]>
     </description>
     <version>1.2</version>
-    <vendor email="stokito@gmail.com" url="http://stokito.name/">Sergey Ponomarev</vendor>
+    <vendor email="stokito@gmail.com" url="https://stokito.name/">Sergey Ponomarev</vendor>
     <extensions defaultExtensionNs="com.intellij">
         <localInspection shortName="SingletonPattern"
                          displayName="Inappropriate use of Singleton design pattern"
