@@ -20,7 +20,7 @@
     <version>1.2</version>
     <vendor email="stokito@gmail.com" url="http://stokito.name/">Sergey Ponomarev</vendor>
     <extensions defaultExtensionNs="com.intellij">
-        <localInspection shortName="Singleton"
+        <localInspection shortName="SingletonPattern"
                          displayName="Inappropriate use of Singleton design pattern"
                          groupPath="Design Patterns"
                          groupName="GoF"
