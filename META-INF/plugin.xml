@@ -27,6 +27,6 @@
                          enabledByDefault="true"
                          level="WARNING"
                          hasStaticDescription="true"
-                         implementationClass="com.github.stokito.IdeaSingletonInspection.SingletonInspection"/>
+                         implementationClass="com.github.stokito.IdeaSingletonInspection.SingletonPatternInspection"/>
     </extensions>
 </idea-plugin>

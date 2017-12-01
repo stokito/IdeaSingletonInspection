@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 
-public class SingletonInspection extends BaseJavaLocalInspectionTool {
+public class SingletonPatternInspection extends BaseJavaLocalInspectionTool {
 
   @SuppressWarnings({"PublicField"})
   public boolean m_checkFinal = false;
@@ -16,7 +16,7 @@ public class SingletonInspection extends BaseJavaLocalInspectionTool {
   @NotNull
   @Override
   public PsiElementVisitor buildVisitor(@NotNull final ProblemsHolder holder, final boolean isOnTheFly) {
-    return new SingletonInspectionVisitor(holder, m_checkFinal);
+    return new SingletonPatternInspectionVisitor(holder, m_checkFinal);
   }
 
   @Override

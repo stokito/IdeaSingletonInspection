@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-class SingletonInspectionVisitor extends JavaElementVisitor {
+class SingletonPatternInspectionVisitor extends JavaElementVisitor {
 
   private static final List<Smell> smells = new ArrayList<Smell>();
   private final boolean checkFinal;
@@ -21,7 +21,7 @@ class SingletonInspectionVisitor extends JavaElementVisitor {
     smells.add(new ConstructorsArePrivate());
   }
 
-  public SingletonInspectionVisitor(@NotNull final ProblemsHolder holder, final boolean checkFinal) {
+  public SingletonPatternInspectionVisitor(@NotNull final ProblemsHolder holder, final boolean checkFinal) {
     super();
     this.checkFinal = checkFinal;
     for (final Smell smell : smells) {
