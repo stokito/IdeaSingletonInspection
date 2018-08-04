@@ -5,6 +5,8 @@ import com.github.stokito.IdeaSingletonInspection.quickFixes.QuickFixes
 import com.intellij.psi.PsiClass
 import com.intellij.psi.PsiClassType
 import com.intellij.psi.PsiMethod
+import com.intellij.psi.PsiModifier.PUBLIC
+import com.intellij.psi.PsiModifier.STATIC
 
 class InstanceGetters : Smell() {
     override fun check(aClass: PsiClass) {
@@ -17,7 +19,7 @@ class InstanceGetters : Smell() {
 
     private fun checkInstanceGetterHasPublicAndStaticModifiers(instanceGetter: PsiMethod) {
         val modifiers = instanceGetter.modifierList
-        if (!(modifiers.hasModifierProperty("public") && modifiers.hasModifierProperty("static"))) {
+        if (!(modifiers.hasModifierProperty(PUBLIC) && modifiers.hasModifierProperty(STATIC))) {
             holder!!.registerProblem(instanceGetter, "getInstance() must be public and static", QuickFixes.INSTANCE_GETTERS_MODIFIERS)
         }
     }

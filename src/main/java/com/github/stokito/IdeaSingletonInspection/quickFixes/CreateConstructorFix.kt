@@ -4,6 +4,7 @@ import com.intellij.codeInspection.LocalQuickFix
 import com.intellij.codeInspection.ProblemDescriptor
 import com.intellij.openapi.project.Project
 import com.intellij.psi.*
+import com.intellij.psi.PsiModifier.PRIVATE
 
 class CreateConstructorFix : LocalQuickFix {
     override fun getName(): String {
@@ -16,7 +17,7 @@ class CreateConstructorFix : LocalQuickFix {
         val constructor = factory.createConstructor()
         val nameIdentifier = aClass.nameIdentifier!!
         constructor.name = nameIdentifier.text
-        constructor.modifierList.setModifierProperty("private", true)
+        constructor.modifierList.setModifierProperty(PRIVATE, true)
         aClass.add(constructor)
     }
 

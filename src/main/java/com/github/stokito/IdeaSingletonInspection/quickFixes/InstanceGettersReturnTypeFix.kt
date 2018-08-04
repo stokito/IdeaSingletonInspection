@@ -4,9 +4,7 @@ import com.intellij.codeInspection.LocalQuickFix
 import com.intellij.codeInspection.ProblemDescriptor
 import com.intellij.openapi.project.Project
 import com.intellij.psi.PsiClass
-import com.intellij.psi.PsiIdentifier
 import com.intellij.psi.PsiMethod
-import com.intellij.psi.PsiTypeElement
 
 class InstanceGettersReturnTypeFix : LocalQuickFix {
     override fun getName(): String {

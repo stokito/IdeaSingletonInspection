@@ -4,7 +4,7 @@ import com.intellij.codeInspection.LocalQuickFix
 import com.intellij.codeInspection.ProblemDescriptor
 import com.intellij.openapi.project.Project
 import com.intellij.psi.PsiClass
-import com.intellij.psi.PsiModifierList
+import com.intellij.psi.PsiModifier.FINAL
 
 class SetClassFinalFix : LocalQuickFix {
     override fun getName(): String {
@@ -18,6 +18,6 @@ class SetClassFinalFix : LocalQuickFix {
     override fun applyFix(project: Project, descriptor: ProblemDescriptor) {
         val aClass = descriptor.psiElement as PsiClass
         val modifierList = aClass.modifierList!!
-        modifierList.setModifierProperty("final", true)
+        modifierList.setModifierProperty(FINAL, true)
     }
 }
