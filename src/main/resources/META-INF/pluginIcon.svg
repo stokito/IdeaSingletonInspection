@@ -10,7 +10,6 @@
         }
         rect, path, circle{
           fill         : #fff;
-          fill-opacity : 0;
         }
         rect{
           stroke-width : 6;
@@ -35,7 +34,7 @@
         text.visibility{
           fill         : #000;
           stroke-width : 0;
-          font-size    : 28px;
+          font-size    : 30px;
           font-family  : monospace;
           font-weight  : bold;
           text-anchor  : middle;
