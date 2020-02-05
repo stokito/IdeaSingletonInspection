@@ -9,4 +9,6 @@ Singleton class should be checked for next errors:
 * Class should have private constructor.
 * `getInstance()` method must be public and static and return instance of its class.
 
+![screenshot.png](screenshot.png)
+
 You may be also interested in [JPatterns](http://www.jpatterns.org/) library for patterns annotations.
