@@ -1,0 +1,33 @@
+<idea-plugin url="https://github.com/stokito/IdeaSingletonInspection">
+  <name>Singleton Inspection</name>
+  <id>SingletonInspection</id>
+  <idea-version since-build="173.0"/>
+  <category>Inspection</category>
+  <description>
+    <![CDATA[
+        <p>This inspection reports about (probably) inappropriate use of the <a href="https://en.wikipedia.org/wiki/Singleton_pattern">Singleton pattern</a>.</p>
+        <p>Just write <code>getInstance()</code> method, and the inspection will check this class like a Singleton.</p>
+        <p>A Singleton class should be checked for next errors:
+        <ul>
+        <li>The class should be final.</li>
+        <li>The class should have private constructor.</li>
+        <li>The <code>getInstance()</code> method must be public and static and return instance of its class.</li>
+        </ul>
+        </p>
+    ]]>
+    </description>
+    <version>1.4</version>
+    <vendor email="stokito@gmail.com" url="https://stokito.name/">Sergey Ponomarev</vendor>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.java</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <localInspection shortName="SingletonDesignPattern"
+                         displayName="Inappropriate use of the Singleton design pattern"
+                         groupPath="Java"
+                         groupName="Class structure"
+                         enabledByDefault="true"
+                         level="WARNING"
+                         hasStaticDescription="true"
+                         implementationClass="com.github.stokito.IdeaSingletonInspection.SingletonPatternInspection"/>
+    </extensions>
+</idea-plugin>
