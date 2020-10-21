@@ -17,8 +17,7 @@
     ]]>
     </description>
     <version>1.4</version>
-    <vendor email="stokito@gmail.com" url="https://stokito.name/">Sergey Ponomarev</vendor>
-    <depends>com.intellij.modules.lang</depends>
+    <vendor email="stokito@gmail.com" url="https://stokito.com/">Sergey Ponomarev</vendor>
     <depends>com.intellij.modules.java</depends>
     <extensions defaultExtensionNs="com.intellij">
         <localInspection shortName="SingletonDesignPattern"
